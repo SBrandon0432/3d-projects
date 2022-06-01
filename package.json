@@ -18,5 +18,8 @@
   "homepage": "https://github.com/SBrandon0432/3d-projects#readme",
   "dependencies": {
     "typescript": "^4.7.2"
+  },
+  "devDependencies": {
+    "three.js": "^0.77.1"
   }
 }
