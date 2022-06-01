@@ -1,0 +1,22 @@
+{
+  "name": "3d-projects",
+  "version": "1.0.0",
+  "description": "showcasing my skills with three.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBrandon0432/3d-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SBrandon0432/3d-projects/issues"
+  },
+  "homepage": "https://github.com/SBrandon0432/3d-projects#readme",
+  "dependencies": {
+    "typescript": "^4.7.2"
+  }
+}
