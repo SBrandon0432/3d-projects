@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene()
 
@@ -14,9 +15,12 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
+new OrbitControls(camera, renderer.domElement)
+
+
 const geometry = new THREE.BoxGeometry()
 const material = new THREE.MeshBasicMaterial({
-    color: 0x00ff00,
+    color: 0xff0000,
     wireframe: true,
 })
 
