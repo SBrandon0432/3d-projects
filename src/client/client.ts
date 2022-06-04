@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene()
-
+// scene.background = new THREE.Color(0xff0000)
 const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -20,11 +20,12 @@ new OrbitControls(camera, renderer.domElement)
 
 const geometry = new THREE.BoxGeometry()
 const material = new THREE.MeshBasicMaterial({
-    color: 0xff0000,
+    color: 0xfff,
     wireframe: true,
 })
 
 const cube = new THREE.Mesh(geometry, material)
+
 scene.add(cube)
 
 window.addEventListener('resize', onWindowResize, false)
