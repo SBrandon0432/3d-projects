@@ -3,7 +3,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene()
 
-scene.background = new THREE.Color(0xff00)
+
 const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
@@ -16,8 +16,8 @@ const renderer = new THREE.WebGLRenderer()
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
-new OrbitControls(camera, renderer.domElement)
-
+const controls = new OrbitControls(camera, renderer.domElement)
+controls.addEventListener('change', render)
 
 const geometry = new THREE.BoxGeometry()
 const material = new THREE.MeshBasicMaterial({
@@ -37,17 +37,18 @@ function onWindowResize() {
     render()
 }
 
-function animate() {
-    requestAnimationFrame(animate)
+// function animate() {
+//     requestAnimationFrame(animate)
 
-    cube.rotation.x += 0.01
-    cube.rotation.y += 0.01
+//     cube.rotation.x += 0.01
+//     cube.rotation.y += 0.01
 
-    render()
-}
+//     render()
+// }
 
 function render() {
     renderer.render(scene, camera)
 }
 
-animate()
+//animate()
+render();
