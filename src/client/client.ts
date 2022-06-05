@@ -45,8 +45,8 @@ function animate() {
     requestAnimationFrame(animate)
 
     // stats.begin() // give the stats for just this bit of animation/code!!!
-    // cube.rotation.x += 0.01
-    // cube.rotation.y += 0.01
+    cube.rotation.x += 0.01
+    cube.rotation.y += 0.01
     // stats.end();
 
     render()
