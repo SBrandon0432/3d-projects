@@ -56,8 +56,14 @@ const cubePositionFolder = cubeFolder.addFolder('Position')
 cubePositionFolder.add(cube.position,'x', -10,10);
 cubePositionFolder.add(cube.position,'y', -10,10);
 cubePositionFolder.add(cube.position,'z', -10,10);
-
 cubePositionFolder.open();
+
+const cubeScaleFolder = cubeFolder.addFolder('Scale')
+cubeScaleFolder.add(cube.scale,'x', 0,5);
+cubeScaleFolder.add(cube.scale,'y', 0,5);
+cubeScaleFolder.add(cube.scale,'z', 0,5);
+cubeScaleFolder.open();
+
 
 function animate() {
     requestAnimationFrame(animate)
