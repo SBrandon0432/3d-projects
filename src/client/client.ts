@@ -28,7 +28,6 @@ const material = new THREE.MeshBasicMaterial({
 })
 
 const cube = new THREE.Mesh(geometry, material)
-
 scene.add(cube)
 
 window.addEventListener('resize', onWindowResize, false)
@@ -45,15 +44,20 @@ document.body.appendChild(stats.dom)
 
 const gui = new GUI();
 const cubeFolder = gui.addFolder('Cube')
-cubeFolder.add(cube.rotation, 'x', 0, Math.PI * 2);
-cubeFolder.add(cube.rotation, 'y', 0, Math.PI * 2);
-cubeFolder.add(cube.rotation, 'z', 0, Math.PI * 2);
+const cubeRotationFolder = cubeFolder.addFolder('Rotation') // nesting in cubeFolder
+
+cubeRotationFolder.add(cube.rotation, 'x', 0, Math.PI * 2);
+cubeRotationFolder.add(cube.rotation, 'y', 0, Math.PI * 2);
+cubeRotationFolder.add(cube.rotation, 'z', 0, Math.PI * 2);
 cubeFolder.open();
+cubeRotationFolder.open();
 
-const cameraFolder = gui.addFolder('Camera');
-cameraFolder.add(camera.position, 'z', 0, 20)
+const cubePositionFolder = cubeFolder.addFolder('Position')
+cubePositionFolder.add(cube.position,'x', -10,10);
+cubePositionFolder.add(cube.position,'y', -10,10);
+cubePositionFolder.add(cube.position,'z', -10,10);
 
-cameraFolder.open();
+cubePositionFolder.open();
 
 function animate() {
     requestAnimationFrame(animate)
