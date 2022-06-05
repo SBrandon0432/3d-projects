@@ -44,10 +44,12 @@ document.body.appendChild(stats.dom)
 function animate() {
     requestAnimationFrame(animate)
 
-//     cube.rotation.x += 0.01
-//     cube.rotation.y += 0.01
+    // stats.begin() // give the stats for just this bit of animation/code!!!
+    // cube.rotation.x += 0.01
+    // cube.rotation.y += 0.01
+    // stats.end();
 
-//     render()
+    render()
     stats.update();
 }
 
