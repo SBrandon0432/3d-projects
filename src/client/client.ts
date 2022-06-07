@@ -72,37 +72,38 @@ cubeScaleFolder.add(cube.scale, 'z', -5, 5, 0.1)
 cubeFolder.add(cube, 'visible', true)
 cubeFolder.open()
 
-// const cubeData = {
-//     width: 1,
-//     height: 1,
-//     depth: 1,
-//     widthSegments: 1,
-//     heightSegments: 1,
-//     depthSegments: 1,
-// }
-// const cubePropertiesFolder = cubeFolder.addFolder('Properties')
-// cubePropertiesFolder
-//     .add(cubeData, 'width', 1, 30)
-//     .onChange(regenerateBoxGeometry)
-//     .onFinishChange(() => console.dir(cube.geometry))
-// cubePropertiesFolder.add(cubeData, 'height', 1, 30).onChange(regenerateBoxGeometry)
-// cubePropertiesFolder.add(cubeData, 'depth', 1, 30).onChange(regenerateBoxGeometry)
-// cubePropertiesFolder.add(cubeData, 'widthSegments', 1, 30).onChange(regenerateBoxGeometry)
-// cubePropertiesFolder.add(cubeData, 'heightSegments', 1, 30).onChange(regenerateBoxGeometry)
-// cubePropertiesFolder.add(cubeData, 'depthSegments', 1, 30).onChange(regenerateBoxGeometry)
+const cubeData = {
+    width: 1,
+    height: 1,
+    depth: 1,
+    widthSegments: 1,
+    heightSegments: 1,
+    depthSegments: 1,
+}
 
-// function regenerateBoxGeometry() {
-//     const newGeometry = new THREE.BoxGeometry(
-//         cubeData.width,
-//         cubeData.height,
-//         cubeData.depth,
-//         cubeData.widthSegments,
-//         cubeData.heightSegments,
-//         cubeData.depthSegments
-//     )
-//     cube.geometry.dispose()
-//     cube.geometry = newGeometry
-// }
+const cubePropertiesFolder = cubeFolder.addFolder('Properties')
+cubePropertiesFolder
+    .add(cubeData, 'width', 1, 30)
+    .onChange(regenerateBoxGeometry)
+    .onFinishChange(() => console.dir(cube.geometry))
+cubePropertiesFolder.add(cubeData, 'height', 1, 30).onChange(regenerateBoxGeometry)
+cubePropertiesFolder.add(cubeData, 'depth', 1, 30).onChange(regenerateBoxGeometry)
+cubePropertiesFolder.add(cubeData, 'widthSegments', 1, 30).onChange(regenerateBoxGeometry)
+cubePropertiesFolder.add(cubeData, 'heightSegments', 1, 30).onChange(regenerateBoxGeometry)
+cubePropertiesFolder.add(cubeData, 'depthSegments', 1, 30).onChange(regenerateBoxGeometry)
+
+function regenerateBoxGeometry() {
+    const newGeometry = new THREE.BoxGeometry(
+        cubeData.width,
+        cubeData.height,
+        cubeData.depth,
+        cubeData.widthSegments,
+        cubeData.heightSegments,
+        cubeData.depthSegments
+    )
+    cube.geometry.dispose()
+    cube.geometry = newGeometry
+}
 
 // const sphereData = {
 //     radius: 1,
@@ -113,6 +114,7 @@ cubeFolder.open()
 //     thetaStart: 0,
 //     thetaLength: Math.PI,
 // }
+
 // const sphereFolder = gui.addFolder('Sphere')
 // const spherePropertiesFolder = sphereFolder.addFolder('Properties')
 // spherePropertiesFolder.add(sphereData, 'radius', 0.1, 30).onChange(regenerateSphereGeometry)
