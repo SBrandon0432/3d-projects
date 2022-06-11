@@ -166,14 +166,14 @@ function regenerateBoxGeometry() {
 //     icosahedron.geometry = newGeometry
 // }
 
-//const debug = document.getElementById('debug1') as HTMLDivElement
+const debug = document.getElementById('debug1') as HTMLDivElement
 
 function animate() {
     requestAnimationFrame(animate)
 
     render()
 
-    //debug.innerText = 'Matrix\n' + cube.matrix.elements.toString().replace(/,/g, '\n')
+    debug.innerText = 'Matrix\n' + cube.matrix.elements.toString().replace(/,/g, '\n')
 
     stats.update()
 }

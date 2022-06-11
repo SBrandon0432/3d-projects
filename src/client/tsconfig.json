@@ -1,7 +1,18 @@
 {
   "compilerOptions": {
       "moduleResolution": "node",
-      "strict": true
+      "strict": true,
+      "outDir": "dist",
+      "module": "es6",
+      "target": "es5",
+      "sourceMap": true,
+      "allowJs": true,
+      "jsx": "react-jsx",
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "allowSyntheticDefaultImports": true,
   },
   "include": ["**/*.ts"]
 }
