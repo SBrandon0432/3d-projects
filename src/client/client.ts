@@ -6,6 +6,11 @@ import { GUI } from 'dat.gui'
 const scene = new THREE.Scene()
 scene.add(new THREE.AxesHelper(5))
 
+const light = new THREE.PointLight(0xff0, 2)
+light.position.set(10,10,10)
+scene.add(light)
+
+
 const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
